@@ -87,3 +87,5 @@ Sound Generator
 #### Específicaciones
 
 #### Salida
+
+### Fotografías de la práctica: 

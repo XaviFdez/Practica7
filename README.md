@@ -156,7 +156,8 @@ Las salidas dependerán de los subprogramas de la segunda parte del código (aud
 
 Especificando en cada subprograma nos darán la información siguiente lo cual depende lo que ocurra saldrá su serial Print por el puerto serie.
 
- - *audio_info:* Imprime información general sobre el estado de reproducción del audio.
+ - #### *audio_info:* 
+Imprime información general sobre el estado de reproducción del audio.
 
  - audio_id3data: Imprime metadatos ID3 del archivo de audio.
 

@@ -156,27 +156,38 @@ Las salidas dependerán de los subprogramas de la segunda parte del código (aud
 
 Especificando en cada subprograma nos darán la información siguiente lo cual depende lo que ocurra saldrá su serial Print por el puerto serie.
 
- - #### *audio_info:* Imprime información general sobre el estado de reproducción del audio.
+ - #### audio_info:
+Imprime información general sobre el estado de reproducción del audio.
 
- - audio_id3data: Imprime metadatos ID3 del archivo de audio.
+ - #### audio_id3data: 
+Imprime metadatos ID3 del archivo de audio.
 
- - audio_eof_mp3: Indica el final del archivo de audio MP3.
+ - #### audio_eof_mp3: 
+Indica el final del archivo de audio MP3.
 
- - audio_showstation: Muestra información sobre la estación de radio que se está reproduciendo.
+ - #### audio_showstation:
+Muestra información sobre la estación de radio que se está reproduciendo.
 
- - audio_showstreaminfo: Muestra información sobre el flujo de audio.
+ - #### audio_showstreaminfo:
+Muestra información sobre el flujo de audio.
 
- - audio_showstreamtitle: Muestra el título del flujo de audio.
+ - #### audio_showstreamtitle: 
+Muestra el título del flujo de audio.
 
- - audio_bitrate: Muestra la tasa de bits del audio.
+ - #### audio_bitrate: 
+Muestra la tasa de bits del audio.
 
- - audio_commercial: Muestra la duración de los anuncios comerciales.
+ - #### audio_commercial: 
+Muestra la duración de los anuncios comerciales.
 
- - audio_icyurl: Muestra la URL de la página principal del flujo de audio.
+ - #### audio_icyurl: 
+Muestra la URL de la página principal del flujo de audio.
 
- - audio_lasthost: Muestra la última URL del flujo de audio reproducida.
+ - #### audio_lasthost: 
+Muestra la última URL del flujo de audio reproducida.
 
- - audio_eof_speech: Indica el final de la reproducción de un archivo de audio de tipo discurso.
+ - #### audio_eof_speech: 
+Indica el final de la reproducción de un archivo de audio de tipo discurso.
 
 ```
 info
@@ -184,9 +195,7 @@ id3data
 eof_mp3
 station
 streaminfo
-.
-.
-.
+...
 ```
 
 ### Fotografías de la práctica: 

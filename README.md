@@ -50,19 +50,21 @@ Cuando la reproducción termina, se detiene el generador de audio y se muestra u
 
 ```mermaid
 graph TD;
-    Inicio --> |Inicialización Serial| Inicialización_AudioFileSourcePROGMEM;
-    Inicialización_AudioFileSourcePROGMEM --> |Inicialización AudioGeneratorAAC| Inicialización_AudioGeneratorAAC;
-    Inicialización_AudioGeneratorAAC --> |Inicialización AudioOutputI2S| Inicialización_AudioOutputI2S;
-    Inicialización_AudioOutputI2S --> |Configuración del ganancia de salida| Configuración_ganancia_salida;
-    Configuración_ganancia_salida --> |Configuración de los pines de salida| Configuración_pines_salida;
-    Configuración_pines_salida --> |Inicio de la reproducción del archivo AAC| Inicio_reproducción_archivo_AAC;
-    Inicio_reproducción_archivo_AAC --> |¿El archivo está en reproducción?| ¿Archivo_en_reproducción?;
-    ¿Archivo_en_reproducción? -- No --> |Detener la reproducción| Detener_reproducción;
-    Detener_reproducción --> |Mostrar mensaje "Sound Generator"| Mostrar_mensaje;
-    Mostrar_mensaje --> |Esperar 1 segundo| Esperar;
-    Esperar --> Inicio;
-    ¿Archivo_en_reproducción? -- Sí --> |Continuar reproducción del archivo AAC| Continuar_reproducción;
-    Continuar_reproducción --> Fin;
+    A[Inicio] --> B[Setup]
+    B --> C(Crear objetos de audio)
+    C --> D[Inicializar Serial]
+    C --> E[Crear objeto AudioFileSourcePROGMEM]
+    C --> F[Crear objeto AudioGeneratorAAC]
+    C --> G[Crear objeto AudioOutputI2S]
+    G --> H[Configurar ganancia y pinout]
+    F --> I[Iniciar audio]
+    A --> J(¿AAC está en ejecución?)
+    J -->|Sí| K[Ejecutar loop de AAC]
+    K --> J
+    J -->|No| L[Detener AAC]
+    L --> M[Imprimir mensaje]
+    M --> N[Esperar 1 segundo]
+    N --> J
 ```
 
 #### Salida
@@ -198,4 +200,11 @@ streaminfo
 ...
 ```
 
-### Fotografías de la práctica: 
+### Fotografías de la práctica:
+
+![1714844741538](https://github.com/XaviFdez/Practica7/assets/160432677/db1d1535-ab3e-4737-adb2-d9af120fa0d1)
+
+![1714844741532](https://github.com/XaviFdez/Practica7/assets/160432677/50dbf8c0-9b6a-4ab9-bd44-4102232ea8b3)
+
+
+
